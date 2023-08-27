@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+
+<h1>{{ page.description }}</h1>
+{{ content }}
+
+<!-- 
+{%- for col in site.collections -%}
+<h2>{{ col.name }}</h2>
+{% include card_list.html collection=col %}
+{%- endfor -%} -->
+{% if site.theme_config.show_projects == true %}
+  <h2>Projects</h2>
+  {% include card_list.html collection=site.projects %}
+{% endif %}
+
+{% if site.theme_config.show_misc_list == true %}
+  <h2>{{ site.theme_config.home.title_misc_list }}</h2>
+  {% include vertical_list.html collection=site.data.home.misc_entries %}
+{% endif %}
+
+<h2>My favorite things</h2>
+Tools, toys, and other resources I enjoy using.
+{%- comment -%}Adapt card list to show list  {%- endcomment -%}
+{%- assign types = site.faves | map: 'resourceType' | join: ',' | split: ',' | uniq | sort_natural -%}
+<ul class="horizontal-list">
+  {%- for type in types -%}
+    <li class="card">
+      <a href="/favs#{{type}}">
+        <span class="header">
+          {{type}}
+        </span>
+        <hr />
+        <p class="body">
+          {{ site.faves | where:"resourceType",type | map:'title' | array_to_sentence_string | truncatewords:10 }}
+        </p>
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>
+
+{% if site.theme_config.show_blog == true %}
+  <h2>{{ site.theme_config.home.title_blog }}</h2>
+  For even less organized thoughts.
+  {% include post_list.html %}
+{% endif %}

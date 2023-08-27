@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div>
+    <h1><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">{{ page.title }}&#10697;</a></h1>
+    {%- if page.isFoss -%}
+    <p>&#128275;Open source</p>
+   {%- endif -%}
+    <h2>Applications:</h2> 
+    {{page.categories | array_to_sentence_string}}
+    <div class="dashed"></div>
+</div>
+
+{{ content | markdownify }}
+
+<a href="/favs#{{ page.resourceType }}">back...</a>

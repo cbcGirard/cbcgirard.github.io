@@ -1,0 +1,16 @@
+<ul class="horizontal-list">
+  {% for item in include.collection %}
+    <li>
+      {% if page.url == item.url %}
+        <mark>
+          {{ item.title }}
+        </mark>
+      {% else %}
+        <a href="{{ item.url }}">
+          {{ item.title }}
+        </a>
+      {% endif %}
+      &nbsp;&nbsp;
+    </li>
+  {% endfor %}
+</ul>

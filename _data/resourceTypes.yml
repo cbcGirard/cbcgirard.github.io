@@ -1,0 +1,5 @@
+resourceTypes:
+    - resourceType: Software
+    - resourceType: Hardware
+    - resourceType: Mechanical
+    - resourceType: Refer-tainment
