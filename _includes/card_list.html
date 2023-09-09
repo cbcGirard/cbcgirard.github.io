@@ -10,30 +10,31 @@
       {%- endif -%}
         <span class="header">
           {{ item.title }}
+          {%- if item.linkout -%}
+          {%- include linkout.svg -%}
+        {%- endif -%}
 
           {% if item.highlight %}
             <mark>{{ item.highlight }}</mark>
-          {% endif %}
-          {%- if item.isFoss -%}
-          &#128275;
-        {%- endif -%}
-          {%- if item.linkout` -%}
-          &#10697;
           {%- endif -%}
+          {%- if item.isFoss -%}
+            {%- include openLock.svg -%}
+          {%- endif -%}
+
 
         </span>
 
         <hr />
 
-        {% if item.desc != false %}
         <p class="body">
-          {{ item.desc }}
+
+          {% if item.categories %}
+            <i>{{item.categories | array_to_sentence_string}}</i>
+          {% endif %}
+          {% if item.desc != false %}
+            {{ item.desc }}
+          {% endif %}
         </p>
-        {% elsif item.categories %}
-        <p class="body">
-          <i>{{item.categories | array_to_sentence_string}}</i>
-        </p>
-        {% endif %}
       </a>
     </li>
 

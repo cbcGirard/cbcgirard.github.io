@@ -3,9 +3,12 @@ layout: default
 ---
 
 <div>
-    <h1><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">{{ page.title }}&#10697;</a></h1>
+    <h1><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">
+        {{page.title}}&nbsp;
+        {%- include linkout.svg -%}
+    </a></h1>
     {%- if page.isFoss -%}
-    <p>&#128275;Open source</p>
+    <p>{%- include openLock.svg -%}Open source</p>
    {%- endif -%}
     <h2>Applications:</h2> 
     {{page.categories | array_to_sentence_string}}

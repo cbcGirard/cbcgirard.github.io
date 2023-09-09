@@ -222,12 +222,21 @@ p code, li code {
   //border: 1px solid var(--text-secondary);
 }
 
-
+.textIcon {
+  line-height: .8em;
+  height: .8em;
+  width: .8em;
+  fill: currentColor;
+  // padding-left: 0.2em;
+  // padding-right: 0.2em;
+}
 
 .tagline {
 	font-size: 2rem;
 	font-family: "Roboto Mono", Courier, monospace;
 	color: var(--headings);
+  line-height: 1;
+  margin: 0.5em 0;
 	// text-shadow: 1px 0px 2px, 0px 1px 2px;
 }
 
@@ -241,4 +250,12 @@ html[data-theme="dark"] {
     .tagline, h1, h2, h3 {
     text-shadow: 1px 0px 3px #afcfff80, 0px 1px 3px #afcfff80;
   };
+}
+
+
+::marker {
+  content: url("/_includes/diamond.svg");
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
 }
