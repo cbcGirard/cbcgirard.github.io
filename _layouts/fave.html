@@ -8,13 +8,14 @@ layout: default
         <i class="fa-solid fa-up-right-from-square"></i>
     </a></h1>
     {%- if page.isFoss -%}
-    <p><i class="fa-brands fa-osi"></i>pen source</p>
+    <p><i class="fa-brands fa-osi"></i>pen source: 
    {%- endif -%}
    {%- if page.OSes -%}
     {%- for os in page.OSes -%}
-      <i class="fa-brands fa-{{os}}"></i>
+      <i class="fa-brands fa-{{os}} fa-2x" style="margin-left: .5em; margin-left: .5em;"></i>
     {%- endfor -%}
    {%- endif -%}
+</p>
     <h2>Applications:</h2> 
     {{page.categories | array_to_sentence_string}}
     <div class="dashed"></div>
