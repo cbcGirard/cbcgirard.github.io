@@ -8,6 +8,9 @@
       {% else %}
         <a href="{{ item.url }}">
           {{ item.title }}
+          {%- if item.icon -%}
+            {{item.icon}}
+          {%- endif -%}
         </a>
       {% endif %}
       &nbsp;&nbsp;

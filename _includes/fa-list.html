@@ -1,0 +1,18 @@
+<ul class="fa-ul">
+    {%- for item in include.collection -%}
+
+        <li>
+            <span class="fa-li">
+                {%- if item.icon -%}
+                    {%- assign ico = item.icon -%}
+                {%- elsif include.icon-%}
+                    {%- assign ico = include.icon -%}
+                {%- else -%}
+                    {%- assign ico = "fa-solid fa-sun fa-sm" -%}
+                {%- endif -%}
+                <i class="{{ ico }}"></i>
+            </span>
+            {{item}}
+        </li>
+    {%- endfor -%}
+</ul>

@@ -4,11 +4,16 @@ layout: default
 
 <div>
     <h1><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">
-        {{page.title}}&nbsp;
-        {%- include linkout.svg -%}
+        {{page.title}}
+        <i class="fa-solid fa-up-right-from-square"></i>
     </a></h1>
     {%- if page.isFoss -%}
-    <p>{%- include openLock.svg -%}Open source</p>
+    <p><i class="fa-brands fa-osi"></i>pen source</p>
+   {%- endif -%}
+   {%- if page.OSes -%}
+    {%- for os in page.OSes -%}
+      <i class="fa-brands fa-{{os}}"></i>
+    {%- endfor -%}
    {%- endif -%}
     <h2>Applications:</h2> 
     {{page.categories | array_to_sentence_string}}

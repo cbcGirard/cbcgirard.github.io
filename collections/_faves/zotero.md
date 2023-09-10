@@ -5,6 +5,7 @@ categories: [writing, research]
 site: https://www.zotero.org
 isFoss: true
 layout: fave
+OSes: [apple, linux, windows]
 ---
 
 With the modern internet, the difficulties of background research is less about locating sources than it is about keeping track of the most useful ones while you sift through the instantly-available resources. Zotero makes this management about as automatic as possible, freeing up your mental bandwidth for the actual content.

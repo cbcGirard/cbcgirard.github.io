@@ -24,15 +24,8 @@
           {%- if site.theme_config.show_copyright == true -%}
           &copy;&nbsp;{{ "now" | date: "%Y" }}&nbsp;{{site.author}}
           &nbsp;
-          •
-          &nbsp;
           {%- endif -%}
-          {%- if site.soopr -%}
-          Powered by <a href="https://www.soopr.co" target="_blank" rel="noreferrer">Soopr</a>
-          &nbsp;
-          •
-          &nbsp;
-          {%- endif -%}
+          <i class="fa-solid fa-code-fork"></i>&nbsp;
           Theme forked from&nbsp;<a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noreferrer">Moonwalk</a>
         </div>
       </div>

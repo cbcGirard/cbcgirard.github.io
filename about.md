@@ -3,22 +3,10 @@ layout: default
 title: About me
 ---
 ## Education
-- BS Engineering Physics, Biola University
-- BS Biomedical Engineering, University of Southern California
-- MS Biomedical Engineering, University of Southern California
-- PhD Biomedical Engineering, University of Southern California
+{% include fa-list.html collection = site.data.degrees icon ="fa-solid fa-graduation-cap fa-2xs" %}
 
 ## Interests
-In no particular order:
-- Reverse engineering
-- 3d printing
-- Neural interfaces
-- Manual and CNC machining
-- Home automation and IOT
-- Embedded devices
-- Home brewing
-- Computational neuroscience
-- Guitar and piano
-- Woodworking
+In no particular order: <br>
+{% include fa-list.html collection = site.data.interests %}
 
 But most of all, I enjoy helping others learn what I've learned, and pursue their own interests.

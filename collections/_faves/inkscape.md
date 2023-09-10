@@ -5,4 +5,5 @@ categories: [drawing, vector graphics]
 site: https://inkscape.org/
 isFoss: true
 layout: fave
+OSes: [apple, linux, windows]
 ---

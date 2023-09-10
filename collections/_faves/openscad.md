@@ -5,6 +5,7 @@ categories: [CAD]
 site: https://openscad.org/
 isFoss: True
 layout: fave
+OSes: [apple, freebsd, linux, windows ]
 ---
 
 It's a quirky entry in the world of CAD, but it has its use cases. Like [LaTeX](/faves/latex) compared to Microsoft Word, OpenSCAD uses scripted input to later generate the final product, instead of the graphical [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) approach of most CAD packages.

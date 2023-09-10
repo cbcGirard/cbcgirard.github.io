@@ -3,7 +3,7 @@ layout: default
 title: Favorites
 ---
 
-There are no paid endorsements or referrals here, as you'd probably expect with all the open-source ({%- include openLock.svg -%}) stuff. They're just resources and tools that I like, and think you might too.
+There are no paid endorsements or referrals here, as you'd probably expect with all the <i class="fa-brands fa-osi"></i>pen source stuff. They're just resources and tools that I like, and think you might too.
 
 
 {%- comment -%}
@@ -15,7 +15,6 @@ Modified from https://edcupaioli.com/blog/get-a-list-of-tags-in-jekyll-two-ways/
   {%- assign thefaves = site.faves | where_exp: "fav", "fav.resourceType contains cat" -%}
   {%- unless thefaves==empty -%}
 	<h2 id="{{cat}}">{{ cat }}</h2>
-
     {% include card_list.html collection=thefaves %}
   {%- endunless -%}
 

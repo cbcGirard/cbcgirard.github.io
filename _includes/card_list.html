@@ -11,16 +11,25 @@
         <span class="header">
           {{ item.title }}
           {%- if item.linkout -%}
-          {%- include linkout.svg -%}
-        {%- endif -%}
+          <span>
+            <i class="fa-solid fa-up-right-from-square"></i>
+          </span>
+          {%- endif -%}
 
           {% if item.highlight %}
             <mark>{{ item.highlight }}</mark>
           {%- endif -%}
-          {%- if item.isFoss -%}
-            {%- include openLock.svg -%}
-          {%- endif -%}
-
+          {%- unless item.isFoss==empty and item.OSes==empty -%}
+            {%- if item.isFoss -%}
+              &nbsp;<i class="fa-brands fa-osi fa-xs"></i>
+            {%- endif -%}
+            {%- if item.OSes -%}
+            <br>
+              {%- for os in item.OSes -%}
+                <i class="fa-brands fa-{{os}}"></i>
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endunless -%}
 
         </span>
 

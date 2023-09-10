@@ -252,10 +252,8 @@ html[data-theme="dark"] {
   };
 }
 
-
-::marker {
-  content: url("/_includes/diamond.svg");
-  height: 1em;
-  width: 1em;
-  line-height: 1em;
+.subheading {
+  font-style: italic;
+  margin-top: -1em;
+  margin-bottom: 1em;
 }

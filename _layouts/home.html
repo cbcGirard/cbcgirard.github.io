@@ -13,6 +13,7 @@ layout: default
 {%- endfor -%} -->
 {% if site.theme_config.show_projects == true %}
   <h2>Projects</h2>
+  <div class="subheading">Doings past and present</div>
   {% include card_list.html collection=site.projects %}
 {% endif %}
 
@@ -22,7 +23,7 @@ layout: default
 {% endif %}
 
 <h2>My favorite things</h2>
-Tools, toys, and other resources I enjoy using.
+<div class="subheading">Tools, toys, and other resources I enjoy using.</div>
 {%- comment -%}Adapt card list to show list  {%- endcomment -%}
 {%- assign types = site.faves | map: 'resourceType' | join: ',' | split: ',' | uniq | sort_natural -%}
 <ul class="horizontal-list">
@@ -43,6 +44,6 @@ Tools, toys, and other resources I enjoy using.
 
 {% if site.theme_config.show_blog == true %}
   <h2>{{ site.theme_config.home.title_blog }}</h2>
-  For even less organized thoughts.
+  <div class="subheading">For even less organized thoughts.</div>
   {% include post_list.html %}
 {% endif %}
