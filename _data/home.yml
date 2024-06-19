@@ -2,11 +2,20 @@ footer_entries:
 
   - title: github
     url: https://github.com/cbcGirard
-    icon: <i class="fa-brands fa-github"></i>
+    icon: <iconify-icon inline icon="tabler:brand-github-filled"></iconify-icon>
 
   - title: linked
     url: https://www.linkedin.com/in/cbcgirard/
-    icon: <i class="fa-brands fa-linkedin"></i>
+    icon: <iconify-icon inline icon="tabler:brand-linkedin"></iconify-icon>
+
+  - title: google scholar
+    url: https://scholar.google.com/citations?hl=en&user=S2JyJ0AAAAAJ
+    icon: <iconify-icon inline icon="academicons:google-scholar"></iconify-icon>
+
+
+  - title: orc
+    url: https://orcid.org/0009-0008-8349-3918
+    icon: <iconify-icon inline icon="academicons:orcid"></iconify-icon>
 
   - title: feed
     url: feed.xml

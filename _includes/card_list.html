@@ -12,7 +12,7 @@
           {{ item.title }}
           {%- if item.linkout -%}
           <span>
-            <i class="fa-solid fa-up-right-from-square"></i>
+            <iconify-icon inline icon="tabler:external-link"></iconify-icon>
           </span>
           {%- endif -%}
 
@@ -21,12 +21,12 @@
           {%- endif -%}
           {%- unless item.isFoss==empty and item.OSes==empty -%}
             {%- if item.isFoss -%}
-              &nbsp;<i class="fa-brands fa-osi fa-xs"></i>
+              &nbsp;<iconify-icon inline icon="tabler:brand-open-source"></iconify-icon>
             {%- endif -%}
             {%- if item.OSes -%}
             <br>
               {%- for os in item.OSes -%}
-                <i class="fa-brands fa-{{os}}" style="margin-left: .5em; margin-right: .5em;"></i>
+                <iconify-icon inline icon="mdi:{{os}}" style="margin-left: .25em; margin-right: .25em;"></iconify-icon>
               {%- endfor -%}
             {%- endif -%}
           {%- endunless -%}

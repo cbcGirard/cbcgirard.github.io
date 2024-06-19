@@ -1,16 +1,16 @@
-<ul class="fa-ul">
+<ul class="ico-ul">
     {%- for item in include.collection -%}
 
         <li>
-            <span class="fa-li">
+            <span class="ico-li">
                 {%- if item.icon -%}
                     {%- assign ico = item.icon -%}
                 {%- elsif include.icon-%}
                     {%- assign ico = include.icon -%}
                 {%- else -%}
-                    {%- assign ico = "fa-solid fa-sun fa-xs" -%}
+                    {%- assign ico = "fluent-mdl2:starburst-solid" -%}
                 {%- endif -%}
-                <i class="{{ ico }}"></i>
+                <iconify-icon inline icon="{{ ico }}"></iconify-icon>
             </span>
             {{item}}
         </li>

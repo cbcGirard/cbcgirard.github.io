@@ -5,14 +5,15 @@ layout: default
 <div>
     <h1><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">
         {{page.title}}
-        <i class="fa-solid fa-up-right-from-square"></i>
+        <iconify-icon inline icon="tabler:external-link"></iconify-icon>
     </a></h1>
     {%- if page.isFoss -%}
-    <p><i class="fa-brands fa-osi"></i>pen source: 
+    <p><iconify-icon inline icon="tabler:brand-open-source"></iconify-icon>pen source: 
    {%- endif -%}
    {%- if page.OSes -%}
     {%- for os in page.OSes -%}
-      <i class="fa-brands fa-{{os}} fa-2x" style="margin-left: .5em; margin-left: .5em;"></i>
+      <!-- <i class="fa-brands fa-{{os}} fa-2x" style="margin-left: .5em; margin-left: .5em;"></i> -->
+       <iconify-icon inline icon="mdi:{{os}}" width="2em"></iconify-icon>
     {%- endfor -%}
    {%- endif -%}
 </p>
