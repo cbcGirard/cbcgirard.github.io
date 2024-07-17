@@ -3,22 +3,25 @@ layout: default
 ---
 
 <div>
-    <h1><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">
-        {{page.title}}
-        <iconify-icon inline icon="tabler:external-link"></iconify-icon>
-    </a></h1>
+    <h1 style="margin: auto;"><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">
+            {{page.title}}
+            <iconify-icon inline icon="tabler:external-link"></iconify-icon>
+        </a></h1>
     {%- if page.isFoss -%}
-    <p><iconify-icon inline icon="tabler:brand-open-source"></iconify-icon>pen source: 
-   {%- endif -%}
-   {%- if page.OSes -%}
-    {%- for os in page.OSes -%}
-      <!-- <i class="fa-brands fa-{{os}} fa-2x" style="margin-left: .5em; margin-left: .5em;"></i> -->
-       <iconify-icon inline icon="mdi:{{os}}" width="2em"></iconify-icon>
-    {%- endfor -%}
-   {%- endif -%}
-</p>
-    <h2>Applications:</h2> 
-    {{page.categories | array_to_sentence_string}}
+    <p class="tight-tb">
+        <iconify-icon inline icon="tabler:brand-open-source"></iconify-icon>pen source
+    </p>
+    {%- endif -%}
+    {%- if page.OSes -%}
+        <p class="tight-tb" style="font-size: x-large;">
+            Operating Systems:<br>
+            {%- for os in page.OSes -%}
+            <iconify-icon inline icon="mdi:{{os}}"></iconify-icon>
+            {%- endfor -%}
+        </p>
+    {%- endif -%}
+    <h2 style="margin: auto;">Applications:</h2>
+        <i>{{page.categories | array_to_sentence_string}}</i>
     <div class="dashed"></div>
 </div>
 

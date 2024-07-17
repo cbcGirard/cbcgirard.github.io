@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/ocr-a-std');
 @import "palette.scss";
 
 html { height: 100%; }
@@ -12,7 +13,7 @@ body {
   min-height: 100%;
 }
 pre, code {
-  font-family: "Roboto Mono", "Courier New", monospace;
+  font-family: "OCR A Std", "Roboto Mono", "Courier New", monospace;
   font-size: 0.9rem;
 }
 
@@ -233,7 +234,7 @@ p code, li code {
 
 .tagline {
 	font-size: 2rem;
-	font-family: "Roboto Mono", Courier, monospace;
+	font-family: "OCR A Std", "Roboto Mono", Courier, monospace;
 	color: var(--headings);
   line-height: 1;
   margin: 0.5em 0;
@@ -256,4 +257,19 @@ html[data-theme="dark"] {
   font-style: italic;
   margin-top: -1em;
   margin-bottom: 1em;
+}
+
+.solid-divider {
+  border-top: 1px var(--text) solid;
+  margin: 0.5em 0;
+}
+
+.tight-tb {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+html, body {
+  // margin: 0;
+  overscroll-behavior: none;
 }

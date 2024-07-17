@@ -3,15 +3,21 @@ layout: default
 ---
 
 <div>
-    <h1><a href="{{page.site}}" target="_blank" rel="noopener noreferrer">{{ page.title }}</a></h1>
-    <h2>Applications:</h2> 
-    {{page.categories | array_to_sentence_string}}
-    {%- if page.isFoss -%}
-     <p>Open source</p>
+    <h1>
+        <a href="{{page.linkout}}" target="_blank" rel="noopener noreferrer">{{ page.title }}
+        <iconify-icon inline icon="tabler:external-link"></iconify-icon>
+    </a>
+</h1>
+    {%- if page.desc -%}
+     {{ page.desc}}
     {%- endif -%}
+    <h2>Components</h2> 
+    <i>
+    {{page.components | array_to_sentence_string}}</i>
     <div class="dashed"></div>
 </div>
 
 {{ content | markdownify }}
 
-<a href="/favs#{{ page.resourceType }}">back...</a>
+<!-- <a href="/index#{{ page.resourceType }}">back...</a> -->
+<a href="/#projects">back...</a>
