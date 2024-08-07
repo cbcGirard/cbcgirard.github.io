@@ -1,34 +1,38 @@
 <ul class="horizontal-list">
   {% for item in include.collection %}
 
-    <li class="card">
-      {%- if item.linkout -%}
-        <a href="{{ item.linkout}}">
-      {%- else -%}
+  <li class="card">
+    {%- if item.linkout -%}
+      <a href="{{ item.linkout}}">
+    {%- else -%}
       <a href="{{ item.url }}">
 
-      {%- endif -%}
+    {%- endif -%}
         <span class="header">
           {{ item.title }}
           {%- if item.linkout -%}
           <span>
             <iconify-icon inline icon="tabler:external-link"></iconify-icon>
           </span>
+        </a>
+        <a href="{{ item.url }}">
           {%- endif -%}
 
           {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
+          <mark>{{ item.highlight }}</mark>
           {%- endif -%}
           {%- unless item.isFoss==empty and item.OSes==empty -%}
-            {%- if item.isFoss -%}
-              &nbsp;<iconify-icon inline icon="tabler:brand-open-source"></iconify-icon>
-            {%- endif -%}
-            {%- if item.OSes -%}
-            <br>
-              {%- for os in item.OSes -%}
-                <iconify-icon inline icon="mdi:{{os}}" style="margin-left: .25em; margin-right: .25em;"></iconify-icon>
-              {%- endfor -%}
-            {%- endif -%}
+          {%- if item.isFoss -%}
+          &nbsp;<iconify-icon inline
+            icon="tabler:brand-open-source"></iconify-icon>
+          {%- endif -%}
+          {%- if item.OSes -%}
+          <br>
+          {%- for os in item.OSes -%}
+          <iconify-icon inline icon="mdi:{{os}}"
+            style="margin-left: .25em; margin-right: .25em;"></iconify-icon>
+          {%- endfor -%}
+          {%- endif -%}
           {%- endunless -%}
 
         </span>
@@ -38,14 +42,14 @@
         <p class="body">
 
           {% if item.categories %}
-            <i>{{item.categories | array_to_sentence_string}}</i>
+          <i>{{item.categories | array_to_sentence_string}}</i>
           {% endif %}
           {% if item.desc != false %}
-            {{ item.desc }}
+          {{ item.desc }}
           {% endif %}
         </p>
       </a>
-    </li>
+  </li>
 
   {% endfor %}
 </ul>
